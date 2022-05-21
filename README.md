@@ -1,10 +1,7 @@
 - 👋 Hi, I’m @timwmcqueen
-- 👀 I’m interested in videos games, technology, coding, and family
-- 🌱 I’m currently learning python, ruby, computer science. 
+- 👀 I’m interested in coding, cloud architecture, and development. 
+- 🌱 I’m currently learning python, ruby, Java, cloud architecture, Computer Science. 
 - 💞️ I’m looking to collaborate on anything to learn coding and structure. 
 - 📫 How to reach me timwmcqueen@gmail.com
-
-<!---
-timwmcqueen/timwmcqueen is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Completed Associate of Science - Information Technology.
+I am currently enrolled as a Bachelors of Computer Science which is expected to be completed in 2023. 
