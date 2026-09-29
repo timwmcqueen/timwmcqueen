@@ -2,122 +2,83 @@
 
 **Entry-Level Software Engineer | Full-Stack & Backend Development | IT Operations Background**
 
-I’m an entry-level software engineer with a professional IT operations background, focused on practical, maintainable systems. I build full-stack and backend applications with authentication, relational databases, APIs, automated testing, CI, and containerized workflows. My field-support experience gives me a strong debugging mindset and a practical understanding of users, reliability, and operational software.
+I'm an entry-level software engineer coming from an IT support and operations background. A lot of the software I build comes from problems I've dealt with in real support work: tracking tickets, assigning work, managing devices, monitoring systems, and making it easier for people to get help. I enjoy backend and full-stack work, especially when there is a real workflow or business problem behind it.
 
-## Selected Engineering Projects
+## Projects
 
 ### [FieldOps](https://github.com/timwmcqueen/FieldOps)
-**Next.js · React · TypeScript · PostgreSQL · Prisma · Authentication · RBAC · Vitest · Docker · GitHub Actions**
+**Next.js · React · TypeScript · PostgreSQL · Prisma · Vitest · Docker · GitHub Actions**
 
-A multi-user work-order operations platform built as my flagship portfolio application.
-
-- bcrypt password authentication
-- cryptographically random database-backed sessions
-- HTTP-only session cookies
-- Admin / Dispatcher / Technician role-based authorization
-- server-side ownership and permission checks
-- customer and technician work-order workflows
-- server-enforced status transition rules
-- operational dashboard metrics
-- audit logging for privileged changes
-- PostgreSQL relational model with indexes and foreign keys
-- CI against a real PostgreSQL service
-- Docker / Docker Compose
-- architecture and security documentation
+I built FieldOps to manage customer work orders, assign technicians, and track jobs from open to complete. It has separate Admin, Dispatcher, and Technician roles, login sessions, server-side permission checks, an audit log, tests, PostgreSQL, Docker, and CI.
 
 ### [AssetLedger](https://github.com/timwmcqueen/AssetLedger)
-**Python · FastAPI · SQLAlchemy · Pydantic · REST · Pytest · Docker · GitHub Actions**
+**Python · FastAPI · SQLAlchemy · Pydantic · Pytest · Docker · GitHub Actions**
 
-An IT asset-lifecycle API for tracking devices from inventory through assignment, repair, and retirement.
-
-- durable asset records with unique tags and serial numbers
-- assignment, repair, and retirement lifecycle rules
-- search and status filtering
-- append-only audit history
-- structured HTTP conflict/not-found responses
-- API-level lifecycle tests
-- Docker packaging and CI
+I built AssetLedger to track company computers and other IT equipment. Assets can be assigned, sent for repair, retired, searched, and filtered, and each asset keeps a history of what happened to it. The API is tested with Pytest and can be run with Docker.
 
 ### [SignalWatch](https://github.com/timwmcqueen/SignalWatch)
 **TypeScript · Node.js · Fastify · PostgreSQL · Zod · Vitest · Docker · GitHub Actions**
 
-An endpoint monitoring and incident service that checks HTTP services, records latency/history, and manages incident state.
-
-- asynchronous endpoint checks with request timeouts
-- concurrent background polling
-- check history and latency collection
-- incidents open after repeated failures
-- automatic incident resolution after recovery
-- PostgreSQL repository plus in-memory implementation
-- unit/API tests and production TypeScript build verification
+I built SignalWatch to check web endpoints on a schedule and keep track of whether they are up, how long they take to respond, and when failures turn into incidents. After repeated failures it opens an incident, and when the service recovers it closes it. It supports PostgreSQL and an in-memory store for testing.
 
 ### [Shipping Quote API](https://github.com/timwmcqueen/ShippingCalculator)
-**Java 21 · Spring Boot · REST · JPA · SQL · Flyway · JUnit · Docker · GitHub Actions**
+**Java 21 · Spring Boot · JPA · Flyway · JUnit · Docker · GitHub Actions**
 
-A layered Java backend service with request validation, durable quote history, database migrations, integration tests, Docker, and CI.
+This started as a small Java shipping calculator. I rebuilt it as a Spring Boot API that validates requests, saves quotes to a database, handles money with BigDecimal, uses Flyway for database changes, and includes integration tests, Docker, and CI.
 
 ### [RoadRate](https://github.com/timwmcqueen/Toll-Calculator)
 **React · TypeScript · Vite · Vitest · Testing Library · Docker · GitHub Actions**
 
-A responsive frontend application with typed domain logic, accessibility work, persistent browser state, unit tests, component tests, and production build verification.
+RoadRate is a small React/TypeScript app for calculating toll rates. I used it to focus on frontend structure, responsive design, accessible form controls, saved recent estimates, component tests, and CI.
 
-### AtlasTek Solutions — Production Support Platform
+### AtlasTek Solutions
 **JavaScript · REST APIs · SQL/Data Workflows · Cloudflare**
 
-Software supporting a real technology-services business, including support intake, ticket lookup and replies, technician/admin workflows, knowledge-base integration, operational tracking, and analytics.
+AtlasTek is my own tech support business, and I built software around the way I actually handle support work. The system includes customer ticket intake, ticket lookup and replies, technician/admin workflows, knowledge-base content, status tracking, and reporting.
 
 **Live:** https://atlasteksolutions.com  
 **Support application:** https://app.atlasteksolutions.com
 
-## Reviewer Quick Start
+## If You Want to Review the Code
 
-All featured repositories include setup instructions and source code that can be run locally. The fastest technical review path is:
+All of the main projects include setup instructions and can be run locally.
 
-| Project | Verify locally | Good code-review entry points |
+| Project | Run the checks | Good places to look |
 |---|---|---|
-| [FieldOps](https://github.com/timwmcqueen/FieldOps) | `npm install && npm test && npm run build` | authentication/session handling, API authorization, Prisma data model, work-order state rules, audit logging, ADRs |
-| [AssetLedger](https://github.com/timwmcqueen/AssetLedger) | `pip install -e ".[dev]" && pytest -q` | FastAPI routes, lifecycle service, SQLAlchemy models, audit history, API tests |
-| [SignalWatch](https://github.com/timwmcqueen/SignalWatch) | `npm install && npm test && npm run build` | async endpoint checker, scheduler, incident rules, repository abstraction, PostgreSQL implementation |
-| [Shipping Quote API](https://github.com/timwmcqueen/ShippingCalculator) | `mvn verify` | Spring controllers/services, JPA persistence, Flyway migration, validation/error handling, integration tests |
-| [RoadRate](https://github.com/timwmcqueen/Toll-Calculator) | `npm install && npm test && npm run build` | React component structure, typed domain logic, accessibility, component tests |
+| [FieldOps](https://github.com/timwmcqueen/FieldOps) | `npm install && npm test && npm run build` | login/session code, API permissions, Prisma schema, work-order rules, audit log |
+| [AssetLedger](https://github.com/timwmcqueen/AssetLedger) | `pip install -e ".[dev]" && pytest -q` | FastAPI routes, asset lifecycle service, SQLAlchemy models, API tests |
+| [SignalWatch](https://github.com/timwmcqueen/SignalWatch) | `npm install && npm test && npm run build` | endpoint checker, scheduler, incident logic, PostgreSQL repository |
+| [Shipping Quote API](https://github.com/timwmcqueen/ShippingCalculator) | `mvn verify` | Spring controllers/services, JPA, Flyway, validation, integration tests |
+| [RoadRate](https://github.com/timwmcqueen/Toll-Calculator) | `npm install && npm test && npm run build` | React components, toll logic, accessibility, component tests |
 
-GitHub Actions independently runs automated verification on the primary projects, and the CI badges in each repository show current build status.
+The main projects also use GitHub Actions, so the CI badges in each repository show whether the tests/builds are passing.
 
-## Engineering Skills Demonstrated Here
+## Technical Skills
 
-- full-stack TypeScript development
-- Python / FastAPI backend development
-- Java / Spring Boot backend development
-- Node.js service development
-- React application development
-- authentication and session management
-- role-based authorization
-- REST API design and validation
-- PostgreSQL / SQL data modeling
-- database migrations and audit history
-- asynchronous/background processing
-- unit, integration, API, and component testing
-- Git branches and pull-request workflow
-- GitHub Actions CI
-- Docker and Docker Compose
-- responsive and accessible interfaces
-- production troubleshooting and debugging
+- TypeScript / JavaScript
+- Java / Spring Boot
+- Python / FastAPI
+- React / Next.js
+- Node.js / Fastify
+- PostgreSQL / SQL
+- REST APIs
+- Authentication and role permissions
+- Git / GitHub
+- Automated testing
+- GitHub Actions
+- Docker / Docker Compose
 
 ## Background
 
-- Associate of Science in Information Technology
-- Professional IT field-support experience
-- Experience supporting users, devices, networks, and business technology
-- Hands-on experience building and operating software for a real small business
+- Associate Degree in Information Technology
+- Professional IT support and operations experience
+- Experience supporting users, devices, networks, and business applications
+- Hands-on experience building software for my own small business
 
-## What I’m Looking For
+## What I'm Looking For
 
-I’m pursuing an **Entry-Level Software Engineer / Junior Software Developer** role where I can contribute to production software while continuing to grow across backend systems, full-stack development, testing, and application architecture.
+I'm looking for an **Entry-Level Software Engineer / Junior Software Developer** role where I can contribute to real software, keep learning from experienced engineers, and continue growing in backend and full-stack development.
 
 ## Contact
 
 **Email:** timwmcqueen@gmail.com
-
----
-
-`legacy/` folders are intentionally retained as a record of my learning progression. The projects above represent my current software-engineering work.
