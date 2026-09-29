@@ -2,7 +2,7 @@
 
 **Entry-Level Software Engineer | Full-Stack & Backend Development | IT Operations Background**
 
-I’m an IT professional transitioning into software engineering with a focus on practical, maintainable systems. My field-support background gives me a strong debugging mindset and real experience thinking about reliability, users, operational workflows, and what happens after software reaches production.
+I’m an entry-level software engineer with a professional IT operations background, focused on practical, maintainable systems. I build full-stack and backend applications with authentication, relational databases, APIs, automated testing, CI, and containerized workflows. My field-support experience gives me a strong debugging mindset and a practical understanding of users, reliability, and operational software.
 
 ## Selected Engineering Projects
 
@@ -98,7 +98,7 @@ Software supporting a real technology-services business, including support intak
 
 ## What I’m Looking For
 
-I’m pursuing an **Entry-Level Software Engineer / Junior Software Developer** role where I can contribute to production software, learn from an experienced engineering team, and continue growing across backend systems, full-stack development, testing, and application architecture.
+I’m pursuing an **Entry-Level Software Engineer / Junior Software Developer** role where I can contribute to production software while continuing to grow across backend systems, full-stack development, testing, and application architecture.
 
 ## Contact
 
