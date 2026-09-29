@@ -6,7 +6,7 @@ I’m an IT professional transitioning into software engineering with a focus on
 
 ## Selected Engineering Projects
 
-### [FieldOps](https://github.com/ToTheLoveOfMyLife/FizzBuzz-IF-Else-)
+### [FieldOps](https://github.com/timwmcqueen/FieldOps)
 **Next.js · React · TypeScript · PostgreSQL · Prisma · Authentication · RBAC · Vitest · Docker · GitHub Actions**
 
 A multi-user work-order operations platform built as my flagship portfolio application.
@@ -25,7 +25,7 @@ A multi-user work-order operations platform built as my flagship portfolio appli
 - Docker / Docker Compose
 - architecture and security documentation
 
-### [AssetLedger](https://github.com/ToTheLoveOfMyLife/InheritanceOOP)
+### [AssetLedger](https://github.com/timwmcqueen/AssetLedger)
 **Python · FastAPI · SQLAlchemy · Pydantic · REST · Pytest · Docker · GitHub Actions**
 
 An IT asset-lifecycle API for tracking devices from inventory through assignment, repair, and retirement.
@@ -38,7 +38,7 @@ An IT asset-lifecycle API for tracking devices from inventory through assignment
 - API-level lifecycle tests
 - Docker packaging and CI
 
-### [SignalWatch](https://github.com/ToTheLoveOfMyLife/Validating-User-Input-and-Debugging)
+### [SignalWatch](https://github.com/timwmcqueen/SignalWatch)
 **TypeScript · Node.js · Fastify · PostgreSQL · Zod · Vitest · Docker · GitHub Actions**
 
 An endpoint monitoring and incident service that checks HTTP services, records latency/history, and manages incident state.
@@ -51,12 +51,12 @@ An endpoint monitoring and incident service that checks HTTP services, records l
 - PostgreSQL repository plus in-memory implementation
 - unit/API tests and production TypeScript build verification
 
-### [Shipping Quote API](https://github.com/ToTheLoveOfMyLife/ShippingCalculator)
+### [Shipping Quote API](https://github.com/timwmcqueen/ShippingCalculator)
 **Java 21 · Spring Boot · REST · JPA · SQL · Flyway · JUnit · Docker · GitHub Actions**
 
 A layered Java backend service with request validation, durable quote history, database migrations, integration tests, Docker, and CI.
 
-### [RoadRate](https://github.com/ToTheLoveOfMyLife/Toll-Calculator)
+### [RoadRate](https://github.com/timwmcqueen/Toll-Calculator)
 **React · TypeScript · Vite · Vitest · Testing Library · Docker · GitHub Actions**
 
 A responsive frontend application with typed domain logic, accessibility work, persistent browser state, unit tests, component tests, and production build verification.
@@ -106,4 +106,4 @@ I’m pursuing an **Entry-Level Software Engineer / Junior Software Developer** 
 
 ---
 
-Older repository names and `legacy/` folders are intentionally retained as a record of my learning progression. The projects above represent my current software-engineering work.
+`legacy/` folders are intentionally retained as a record of my learning progression. The projects above represent my current software-engineering work.
