@@ -69,6 +69,20 @@ Software supporting a real technology-services business, including support intak
 **Live:** https://atlasteksolutions.com  
 **Support application:** https://app.atlasteksolutions.com
 
+## Reviewer Quick Start
+
+All featured repositories include setup instructions and source code that can be run locally. The fastest technical review path is:
+
+| Project | Verify locally | Good code-review entry points |
+|---|---|---|
+| [FieldOps](https://github.com/timwmcqueen/FieldOps) | `npm install && npm test && npm run build` | authentication/session handling, API authorization, Prisma data model, work-order state rules, audit logging, ADRs |
+| [AssetLedger](https://github.com/timwmcqueen/AssetLedger) | `pip install -e ".[dev]" && pytest -q` | FastAPI routes, lifecycle service, SQLAlchemy models, audit history, API tests |
+| [SignalWatch](https://github.com/timwmcqueen/SignalWatch) | `npm install && npm test && npm run build` | async endpoint checker, scheduler, incident rules, repository abstraction, PostgreSQL implementation |
+| [Shipping Quote API](https://github.com/timwmcqueen/ShippingCalculator) | `mvn verify` | Spring controllers/services, JPA persistence, Flyway migration, validation/error handling, integration tests |
+| [RoadRate](https://github.com/timwmcqueen/Toll-Calculator) | `npm install && npm test && npm run build` | React component structure, typed domain logic, accessibility, component tests |
+
+GitHub Actions independently runs automated verification on the primary projects, and the CI badges in each repository show current build status.
+
 ## Engineering Skills Demonstrated Here
 
 - full-stack TypeScript development
