@@ -1,21 +1,40 @@
 # Timothy McQueen
 
-**Entry-Level Software Engineer | Backend & Full-Stack Development | IT Operations Background**
+**Entry-Level Software Engineer | Full-Stack & Backend Development | IT Operations Background**
 
-I’m an IT professional moving into software engineering with a focus on practical, maintainable systems. My field-support background gives me a strong debugging mindset and experience thinking about reliability, users, and what happens after software reaches production.
+I’m an IT professional transitioning into software engineering with a focus on practical, maintainable systems. My field-support background gives me a strong debugging mindset and real experience thinking about reliability, users, operational workflows, and what happens after software reaches production.
 
 ## Selected Engineering Projects
+
+### [FieldOps](https://github.com/ToTheLoveOfMyLife/FizzBuzz-IF-Else-)
+**Next.js · React · TypeScript · PostgreSQL · Prisma · Authentication · RBAC · Vitest · Docker · GitHub Actions**
+
+A multi-user work-order operations platform built as my flagship portfolio application.
+
+- bcrypt password authentication
+- cryptographically random database-backed sessions
+- HTTP-only session cookies
+- Admin / Dispatcher / Technician role-based authorization
+- server-side ownership and permission checks
+- customer and technician work-order workflows
+- server-enforced status transition rules
+- operational dashboard metrics
+- audit logging for privileged changes
+- PostgreSQL relational model with indexes and foreign keys
+- CI against a real PostgreSQL service
+- Docker / Docker Compose
+- architecture and security documentation
 
 ### [AssetLedger](https://github.com/ToTheLoveOfMyLife/InheritanceOOP)
 **Python · FastAPI · SQLAlchemy · Pydantic · REST · Pytest · Docker · GitHub Actions**
 
 An IT asset-lifecycle API for tracking devices from inventory through assignment, repair, and retirement.
 
-- Durable asset records with unique tags and serial numbers
-- Assignment, repair, and retirement lifecycle rules
-- Search and status filtering
-- Append-only audit history for asset events
-- Structured HTTP conflict/not-found responses
+- durable asset records with unique tags and serial numbers
+- assignment, repair, and retirement lifecycle rules
+- search and status filtering
+- append-only audit history
+- structured HTTP conflict/not-found responses
 - API-level lifecycle tests
 - Docker packaging and CI
 
@@ -24,37 +43,23 @@ An IT asset-lifecycle API for tracking devices from inventory through assignment
 
 An endpoint monitoring and incident service that checks HTTP services, records latency/history, and manages incident state.
 
-- Async endpoint checks with request timeouts
-- Concurrent background polling
-- Check history and latency collection
-- Incidents open after repeated failures
-- Automatic incident resolution after recovery
+- asynchronous endpoint checks with request timeouts
+- concurrent background polling
+- check history and latency collection
+- incidents open after repeated failures
+- automatic incident resolution after recovery
 - PostgreSQL repository plus in-memory implementation
-- Unit/API tests and production TypeScript build verification
+- unit/API tests and production TypeScript build verification
 
 ### [Shipping Quote API](https://github.com/ToTheLoveOfMyLife/ShippingCalculator)
 **Java 21 · Spring Boot · REST · JPA · SQL · Flyway · JUnit · Docker · GitHub Actions**
 
-A production-style backend service evolved from an early Java exercise into a layered REST API with durable quote history.
-
-- Request validation and structured error responses
-- Relational persistence with JPA and Flyway migrations
-- H2 local/test environment and PostgreSQL-ready production configuration
-- Money calculations using `BigDecimal`
-- Spring Boot / MockMvc integration tests
-- Docker packaging and CI
+A layered Java backend service with request validation, durable quote history, database migrations, integration tests, Docker, and CI.
 
 ### [RoadRate](https://github.com/ToTheLoveOfMyLife/Toll-Calculator)
-**React 19 · TypeScript · Vite · Vitest · Testing Library · Docker · GitHub Actions**
+**React · TypeScript · Vite · Vitest · Testing Library · Docker · GitHub Actions**
 
-A responsive toll-estimation application rebuilt from an early Java console program into a typed modern frontend.
-
-- Business rules isolated from presentation code
-- Accessible form controls and responsive UI
-- Persistent recent-estimate history
-- Unit tests for pricing logic
-- Component tests for user flows
-- Production build verification in CI
+A responsive frontend application with typed domain logic, accessibility work, persistent browser state, unit tests, component tests, and production build verification.
 
 ### AtlasTek Solutions — Production Support Platform
 **JavaScript · REST APIs · SQL/Data Workflows · Cloudflare**
@@ -66,20 +71,23 @@ Software supporting a real technology-services business, including support intak
 
 ## Engineering Skills Demonstrated Here
 
-- Python and FastAPI backend development
-- Java and Spring Boot backend development
-- Node.js and TypeScript service development
-- React and TypeScript frontend development
-- REST API design and request validation
-- SQL / PostgreSQL-backed persistence
-- Database schema and lifecycle modeling
-- Asynchronous polling and background scheduling
-- Unit, integration, and API testing
+- full-stack TypeScript development
+- Python / FastAPI backend development
+- Java / Spring Boot backend development
+- Node.js service development
+- React application development
+- authentication and session management
+- role-based authorization
+- REST API design and validation
+- PostgreSQL / SQL data modeling
+- database migrations and audit history
+- asynchronous/background processing
+- unit, integration, API, and component testing
 - Git branches and pull-request workflow
 - GitHub Actions CI
-- Docker and containerized builds
-- Responsive and accessible interfaces
-- Production troubleshooting and debugging
+- Docker and Docker Compose
+- responsive and accessible interfaces
+- production troubleshooting and debugging
 
 ## Background
 
@@ -98,4 +106,4 @@ I’m pursuing an **Entry-Level Software Engineer / Junior Software Developer** 
 
 ---
 
-Older repositories and `legacy/` folders are intentionally retained as a record of my learning progression. The projects above are the best representation of my current software-engineering work.
+Older repository names and `legacy/` folders are intentionally retained as a record of my learning progression. The projects above represent my current software-engineering work.
