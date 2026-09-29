@@ -11,12 +11,12 @@ I'm an entry-level software engineer coming from an IT support and operations ba
 
 I built FieldOps to manage customer work orders, assign technicians, and track jobs from open to complete. It has separate Admin, Dispatcher, and Technician roles, login sessions, server-side permission checks, an audit log, tests, PostgreSQL, Docker, and CI.
 
-### [RepoLens](https://github.com/timwmcqueen/Rock-paper-scissors)
+### [RepoLens](https://github.com/timwmcqueen/RepoLens)
 **React · TypeScript · Vite · GitHub REST API · Vitest · GitHub Actions**
 
 I built RepoLens so someone can paste any public GitHub repository and get a quick map of the codebase. It detects the stack, tests, CI, Docker setup, likely entry points, language mix, recent commits, and repository structure, then links straight back to the files on GitHub.
 
-**Try it in the browser:** https://stackblitz.com/github/timwmcqueen/Rock-paper-scissors?startScript=dev
+**Try it in the browser:** https://stackblitz.com/github/timwmcqueen/RepoLens?startScript=dev
 
 ### [AssetLedger](https://github.com/timwmcqueen/AssetLedger)
 **Python · FastAPI · SQLAlchemy · Pydantic · Pytest · Docker · GitHub Actions**
@@ -53,7 +53,7 @@ Each project has its own setup instructions. These commands run the main checks 
 | Project | Command |
 |---|---|
 | [FieldOps](https://github.com/timwmcqueen/FieldOps) | `npm install && npm test && npm run build` |
-| [RepoLens](https://github.com/timwmcqueen/Rock-paper-scissors) | `npm install && npm test && npm run build` |
+| [RepoLens](https://github.com/timwmcqueen/RepoLens) | `npm install && npm test && npm run build` |
 | [AssetLedger](https://github.com/timwmcqueen/AssetLedger) | `pip install -e ".[dev]" && pytest -q` |
 | [SignalWatch](https://github.com/timwmcqueen/SignalWatch) | `npm install && npm test && npm run build` |
 | [Shipping Quote API](https://github.com/timwmcqueen/ShippingCalculator) | `mvn verify` |
