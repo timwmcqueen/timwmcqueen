@@ -39,19 +39,19 @@ AtlasTek is my own tech support business, and I built software around the way I 
 **Live:** https://atlasteksolutions.com  
 **Support application:** https://app.atlasteksolutions.com
 
-## If You Want to Review the Code
+## Running the Projects
 
-All of the main projects include setup instructions and can be run locally.
+Each project has its own setup instructions. These commands run the main checks locally:
 
-| Project | Run the checks | Good places to look |
-|---|---|---|
-| [FieldOps](https://github.com/timwmcqueen/FieldOps) | `npm install && npm test && npm run build` | login/session code, API permissions, Prisma schema, work-order rules, audit log |
-| [AssetLedger](https://github.com/timwmcqueen/AssetLedger) | `pip install -e ".[dev]" && pytest -q` | FastAPI routes, asset lifecycle service, SQLAlchemy models, API tests |
-| [SignalWatch](https://github.com/timwmcqueen/SignalWatch) | `npm install && npm test && npm run build` | endpoint checker, scheduler, incident logic, PostgreSQL repository |
-| [Shipping Quote API](https://github.com/timwmcqueen/ShippingCalculator) | `mvn verify` | Spring controllers/services, JPA, Flyway, validation, integration tests |
-| [RoadRate](https://github.com/timwmcqueen/Toll-Calculator) | `npm install && npm test && npm run build` | React components, toll logic, accessibility, component tests |
+| Project | Command |
+|---|---|
+| [FieldOps](https://github.com/timwmcqueen/FieldOps) | `npm install && npm test && npm run build` |
+| [AssetLedger](https://github.com/timwmcqueen/AssetLedger) | `pip install -e ".[dev]" && pytest -q` |
+| [SignalWatch](https://github.com/timwmcqueen/SignalWatch) | `npm install && npm test && npm run build` |
+| [Shipping Quote API](https://github.com/timwmcqueen/ShippingCalculator) | `mvn verify` |
+| [RoadRate](https://github.com/timwmcqueen/Toll-Calculator) | `npm install && npm test && npm run build` |
 
-The main projects also use GitHub Actions, so the CI badges in each repository show whether the tests/builds are passing.
+The main projects also run automated checks through GitHub Actions.
 
 ## Technical Skills
 
