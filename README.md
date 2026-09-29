@@ -1,72 +1,66 @@
 # Timothy McQueen
 
-**IT professional transitioning into software engineering — building practical software for real users and real operational problems.**
+**Entry-Level Software Engineer | Full-Stack Development | IT Operations Background**
 
-I bring hands-on experience from IT field support, troubleshooting, customer-facing technology, and small-business operations into software development. I enjoy taking ambiguous problems, breaking them down, building a working solution, and improving it after real users interact with it.
+I’m an IT professional moving into software engineering with a focus on practical, maintainable applications. My background in field support and customer-facing technology gives me a strong debugging mindset and a clear understanding of what happens after software reaches real users.
 
-## What I’m building
+## Selected Engineering Projects
+
+### [Shipping Quote API](https://github.com/ToTheLoveOfMyLife/ShippingCalculator)
+**Java 21 · Spring Boot · REST · JPA · SQL · Flyway · JUnit · Docker · GitHub Actions**
+
+A production-style backend service evolved from an early Java exercise into a layered REST API with durable quote history.
+
+- REST endpoints with request validation and structured error responses
+- Relational persistence with JPA and Flyway-managed schema migrations
+- H2 for local/test environments and PostgreSQL-ready production configuration
+- Money calculations using `BigDecimal`
+- Integration tests with Spring Boot and MockMvc
+- Docker packaging and automated CI checks
+
+### [RoadRate](https://github.com/ToTheLoveOfMyLife/Toll-Calculator)
+**React 19 · TypeScript · Vite · Vitest · Testing Library · Docker · GitHub Actions**
+
+A responsive toll-estimation application rebuilt from an early Java console program into a modern typed frontend.
+
+- Business rules isolated from presentation code
+- Accessible form controls and responsive UI
+- Persistent recent-estimate history
+- Unit tests for pricing logic and component tests for user flows
+- Production build verification in CI
+- Containerized static deployment with nginx
 
 ### AtlasTek Solutions — Production Support Platform
-I built and operate software supporting a real technology-services business, including customer support intake, ticket lookup and replies, technician workflows, knowledge-base content, operational status tracking, and analytics.
+**JavaScript · REST APIs · SQL/Data Workflows · Cloudflare**
 
-- Customer-facing ticket submission and lookup
-- Technician and administrative workflows
-- Knowledge-base integration
-- Operational tracking and reporting
-- Production deployment and ongoing maintenance
+Software supporting a real technology-services business, including customer support intake, ticket lookup and replies, technician/admin workflows, knowledge-base integration, operational status tracking, and analytics.
 
 **Live:** https://atlasteksolutions.com  
-**Support app:** https://app.atlasteksolutions.com
+**Support application:** https://app.atlasteksolutions.com
 
-### Certification Learning Platform — In Development
-A structured learning and exam-practice platform designed around certification objectives rather than a simple question bank.
+## Engineering Skills Demonstrated in This GitHub
 
-The product includes guided learning, multiple practice modes, concept mastery, readiness scoring, spaced repetition, weak-area review, exam simulation, bookmarks, attempt history, study planning, and content QA workflows.
-
-### Interactive Web Experience
-A browser-based JavaScript project demonstrating DOM state management, responsive UI, dynamic content generation, media handling, Canvas animation, and custom visual effects.
-
-## Technical focus
-
-**Working with**
-
-- JavaScript
-- HTML / CSS
-- Java
-- SQL and relational data
-- Git / GitHub
-- REST-style APIs
-- Cloudflare Pages / Workers
-- Production troubleshooting and debugging
-
-**Currently strengthening**
-
-- TypeScript
-- React
-- Node.js
-- Automated testing
-- CI/CD
-- Data structures and algorithms
-- Application architecture and database design
-
-## What I bring to an engineering team
-
-- Real-world troubleshooting experience and strong debugging habits
-- Experience translating technical problems for non-technical users
-- A production mindset: reliability, maintainability, documentation, and support matter after launch
-- Experience turning customer and business needs into software workflows
-- Comfort learning unfamiliar systems and working through ambiguity
-- Ownership from problem discovery through deployment and ongoing support
+- Java and Spring Boot backend development
+- React and TypeScript frontend development
+- REST API design and validation
+- SQL-backed persistence and database migrations
+- Automated unit and integration testing
+- Git branches, pull requests, and code-review workflow
+- GitHub Actions CI
+- Docker and containerized builds
+- Responsive and accessible web interfaces
+- Debugging production and end-user technology problems
 
 ## Background
 
 - Associate of Science in Information Technology
 - Professional IT field-support experience
+- Experience supporting users, devices, networks, and business technology
 - Hands-on experience building and operating software for a real small business
 
-## Current goal
+## What I’m Looking For
 
-I’m pursuing an **entry-level Software Engineer / Junior Software Developer** role where I can contribute to production software, learn from an experienced engineering team, and continue growing as a full-stack developer.
+I’m pursuing an **Entry-Level Software Engineer / Junior Software Developer** role where I can contribute to production software, learn from an experienced engineering team, and continue growing across frontend, backend, testing, and application architecture.
 
 ## Contact
 
@@ -74,4 +68,4 @@ I’m pursuing an **entry-level Software Engineer / Junior Software Developer** 
 
 ---
 
-> I’m intentionally rebuilding this GitHub around production-quality work. Older repositories document my learning progression; the projects above are the best representation of the engineer I’m becoming.
+Older repositories on this account are intentionally retained as a record of my learning progression. The projects above are the best representation of my current software-engineering work.
