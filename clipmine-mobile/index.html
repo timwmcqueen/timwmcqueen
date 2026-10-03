@@ -3,81 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
-  <meta name="theme-color" content="#0b0f14" />
+  <meta name="theme-color" content="#070a0f" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="ClipMine" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <link rel="icon" href="./icon.svg" type="image/svg+xml" />
-  <title>ClipMine Mobile</title>
+  <title>ClipMine</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 <div class="app">
-  <div class="top"><div class="brand">ClipMine</div><div class="badge">Mobile clip editor</div></div>
-  <div id="install" class="install">In Safari tap <b>Share</b> → <b>Add to Home Screen</b> to install ClipMine like an app.</div>
+  <div class="top"><div class="brand">ClipMine</div><div class="badge">Clip editor</div></div>
+  <div id="install" class="install">In Safari tap <b>Share</b> → <b>Add to Home Screen</b>.</div>
 
-  <section id="picker" class="card picker">
-    <h1>Make clips while you watch.</h1>
-    <p>Choose a video. Drag the playhead to scrub, drag Start and End to adjust your range, then tap Create Clip and keep watching.</p>
+  <section id="picker" class="picker card">
+    <h1>Pick a video and start clipping.</h1>
+    <p>Everything happens on one timeline. Drag the green Start line and gold End line, then create the clip and keep watching.</p>
     <input id="fileInput" type="file" accept="video/*" hidden />
     <button class="primary" id="pickBtn">Choose video</button>
   </section>
 
   <section id="workspace" class="workspace">
     <div class="editorGrid">
-      <div class="card editor">
+      <main class="card editor">
         <div class="videoShell" id="videoShell">
           <video id="video" playsinline preload="metadata"></video>
-          <button class="videoTap" id="videoTap" aria-label="Play or pause"></button>
-          <div class="hud"><span id="hudNow">0:00.00</span><span id="hudRange">No clip selected</span></div>
+          <button id="videoTap" class="videoTap" aria-label="Play or pause"><span id="playGlyph">▶</span></button>
+          <div class="videoTime"><span id="now">0:00.00</span><span id="dur">0:00.00</span></div>
         </div>
 
-        <div class="controls">
-          <div class="transport">
-            <button class="playButton" id="playBtn">▶</button>
-            <div class="time"><b id="now">0:00.00</b><span> / </span><span id="dur">0:00.00</span></div>
-            <button class="secondary" id="playSelection">Play selection</button>
+        <div class="timelineArea">
+          <div class="rangeReadout">
+            <span><i class="startDot"></i><b id="startReadout">0:00.00</b></span>
+            <strong id="selectionDuration">30.00 sec</strong>
+            <span><b id="endReadout">0:30.00</b><i class="endDot"></i></span>
           </div>
 
-          <div class="quickActions">
-            <button class="startButton" id="setStart"><span class="dot green"></span>Set Start</button>
-            <button class="endButton" id="setEnd"><span class="dot gold"></span>Set End</button>
-            <button class="primary createButton" id="addClip">＋ Create Clip</button>
-          </div>
-
-          <div class="timelineCard">
-            <div class="timelineLabels"><span>0:00</span><span id="selectionLabel">Drag handles to choose a clip</span><span id="durationLabel">0:00</span></div>
-            <div class="timeline" id="timeline">
-              <div class="timelineFill" id="timelineFill"></div>
+          <div class="timelineViewport" id="timelineViewport">
+            <div class="timelineContent" id="timelineContent">
+              <div class="ticks"></div>
               <div class="selection" id="selection"></div>
 
-              <div class="boundary start" id="startHandle" role="slider" aria-label="Clip start">
-                <div class="boundaryTag">START</div><div class="boundaryLine"></div><div class="boundaryKnob"></div><div class="timeBubble" id="startBubble">0:00.00</div>
-              </div>
-              <div class="boundary end" id="endHandle" role="slider" aria-label="Clip end">
-                <div class="boundaryTag">END</div><div class="boundaryLine"></div><div class="boundaryKnob"></div><div class="timeBubble" id="endBubble">0:00.00</div>
+              <div class="boundary start" id="startHandle" aria-label="Clip start">
+                <div class="handleCap">START</div><div class="handleLine"></div><div class="handleGrip"></div>
               </div>
 
-              <div class="scrubber" id="scrubber" role="slider" aria-label="Video position">
-                <div class="scrubberTime" id="scrubberBubble">0:00.00</div><div class="scrubberLine"></div><div class="scrubberKnob"></div>
+              <div class="boundary end" id="endHandle" aria-label="Clip end">
+                <div class="handleCap">END</div><div class="handleLine"></div><div class="handleGrip"></div>
+              </div>
+
+              <div class="playhead" id="playhead" aria-label="Video position">
+                <div class="playheadBubble" id="playheadBubble">0:00.00</div><div class="playheadLine"></div><div class="playheadKnob"></div>
               </div>
             </div>
-            <div class="timelineHelp">Drag the white playhead anywhere to scrub. Drag Start or End to fine-tune the clip. The video updates while you drag.</div>
           </div>
+
+          <button id="addClip" class="createClip">＋ Create Clip</button>
         </div>
-      </div>
+      </main>
 
       <section class="library">
-        <div class="libHead"><h2>Clip Library <span id="clipCount"></span></h2><button class="tiny" id="clearAll">Clear</button></div>
-        <div id="clipList" class="clipList"><div class="empty">No clips yet.<br><br>Watch the video → Set Start → Set End → Create Clip.<br><br>Then keep watching and make the next one.</div></div>
+        <div class="libHead"><h2>Clip Library <span id="clipCount"></span></h2><button class="clearLink" id="clearAll">Clear</button></div>
+        <div id="clipList" class="clipList"><div class="empty">No clips yet.<br><br>Drag Start and End on the timeline, tap Create Clip, then keep watching.</div></div>
       </section>
     </div>
   </section>
 </div>
 
 <div id="sheet" class="sheet"><div class="sheetBody"><div class="sheetHead"><h3 id="sheetTitle">Preview</h3><button class="tiny" id="closeSheet">Close</button></div><video id="previewVideo" class="previewVideo" playsinline controls></video><p class="note" id="sheetInfo"></p></div></div>
-<div id="exportOverlay" class="exportOverlay"><div class="exportBox"><div class="spinner"></div><h3 id="exportTitle">Creating clip…</h3><p id="exportText" class="note">Keep ClipMine open while the selected range plays once. The finished clip will then be ready to save.</p><button class="danger" id="cancelExport">Cancel</button></div></div>
+<div id="exportOverlay" class="exportOverlay"><div class="exportBox"><div class="spinner"></div><h3 id="exportTitle">Creating clip…</h3><p id="exportText" class="note">Keep ClipMine open while the range plays once. The finished clip will then be ready to save.</p><button class="danger" id="cancelExport">Cancel</button></div></div>
 <div id="toast" class="toast"></div>
 <canvas id="renderCanvas" hidden></canvas>
 <script src="./export.js"></script>
