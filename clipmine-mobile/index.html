@@ -19,7 +19,7 @@
 
   <section id="picker" class="picker card">
     <h1>Pick a video and start clipping.</h1>
-    <p>One timeline. Drag the video position, drag Start and End, then create the clip and keep watching.</p>
+    <p>One timeline. Drag through the video, drag Start and End, create the clip, then keep watching.</p>
     <input id="fileInput" type="file" accept="video/*" hidden />
     <button class="primary" id="pickBtn">Choose video</button>
   </section>
@@ -40,26 +40,29 @@
             <span><b id="endReadout">0:30.00</b><i class="endDot"></i></span>
           </div>
 
-          <div class="timelineViewport" id="timelineViewport">
-            <div class="timelineContent" id="timelineContent">
-              <div class="ticks" id="ticks"></div>
-              <div class="selection" id="selection"></div>
+          <div class="timelineShell">
+            <div class="timelineViewport" id="timelineViewport">
+              <div class="timelineContent" id="timelineContent">
+                <div class="ticks" id="ticks"></div>
+                <div class="selection" id="selection"></div>
 
-              <div class="boundary start" id="startHandle" aria-label="Clip start">
-                <div class="handleCap">START</div><div class="handleLine"></div><div class="handleGrip"></div>
-              </div>
+                <div class="boundary start" id="startHandle" aria-label="Clip start">
+                  <div class="handleCap">START</div><div class="handleLine"></div><div class="handleGrip"></div>
+                </div>
 
-              <div class="boundary end" id="endHandle" aria-label="Clip end">
-                <div class="handleCap">END</div><div class="handleLine"></div><div class="handleGrip"></div>
+                <div class="boundary end" id="endHandle" aria-label="Clip end">
+                  <div class="handleCap">END</div><div class="handleLine"></div><div class="handleGrip"></div>
+                </div>
               </div>
             </div>
 
-            <div class="playhead" id="playhead" aria-label="Video position">
+            <div class="playhead" id="playhead" aria-hidden="true">
               <div class="playheadBubble" id="playheadBubble">0:00.00</div><div class="playheadLine"></div><div class="playheadKnob"></div>
             </div>
           </div>
 
-          <button id="addClip" class="createClip">＋ Create Clip</button>
+          <div class="timelineHint">Drag the timeline left or right to scrub the video. Drag the green and gold lines to set the clip.</div>
+          <button id="addClip" class="createClip">Create Clip</button>
         </div>
       </main>
 
