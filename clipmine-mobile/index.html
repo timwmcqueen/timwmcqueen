@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#0b0f14" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="ClipMine" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <title>ClipMine Mobile</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="app">
+  <div class="top"><div class="brand">ClipMine</div><div class="badge">iPhone editor</div></div>
+  <div id="install" class="install">Install it like an app: in Safari tap <b>Share</b> → <b>Add to Home Screen</b>.</div>
+  <section id="picker" class="card picker">
+    <h1>Turn one long video into clips.</h1>
+    <p>Your video stays on this device. Pick a source, watch it, mark In/Out, and keep adding clips to your library.</p>
+    <input id="fileInput" type="file" accept="video/*" hidden />
+    <button class="primary" id="pickBtn">Choose video</button>
+    <p class="note" style="margin-top:14px">No account, API key, or desktop required. AI suggestions are intentionally left out of this mobile-first build so basic clipping never gets blocked.</p>
+  </section>
+
+  <section id="workspace" class="workspace">
+    <div class="desktopGrid">
+      <div class="card editor">
+        <div class="videoShell"><video id="video" playsinline controls preload="metadata"></video><div class="hud"><span id="hudNow">0:00.0</span><span id="hudSel">No range</span></div></div>
+        <div class="controls">
+          <div class="transport"><button class="secondary" id="playBtn">▶︎</button><div class="time"><span id="now">0:00.0</span> / <span id="dur">0:00.0</span></div><button class="secondary" id="jumpSel">Play selection</button></div>
+          <div class="marks"><button class="secondary markIn" id="markIn">Mark In</button><button class="secondary markOut" id="markOut">Mark Out</button><button class="primary add" id="addClip">＋ Add Clip</button></div>
+
+          <div class="overviewWrap"><div class="labelRow"><span>FULL VIDEO</span><span id="overviewRange">0:00 — 0:00</span></div><div class="track" id="overviewTrack"><div class="window" id="overviewWindow"></div><div class="selection" id="overviewSel"></div><div class="playhead" id="overviewPlay"></div></div></div>
+
+          <div class="zoom" id="zoomBtns"><button class="tiny" data-zoom="30">30 sec</button><button class="tiny active" data-zoom="60">1 min</button><button class="tiny" data-zoom="120">2 min</button><button class="tiny" data-zoom="300">5 min</button><button class="tiny" data-zoom="600">10 min</button><button class="tiny" data-zoom="full">Full</button></div>
+          <div class="detailWrap"><div class="labelRow"><span id="detailLeft">0:00.0</span><span id="detailMid">DETAIL</span><span id="detailRight">1:00.0</span></div><div class="track" id="detailTrack"><div class="selection" id="detailSel"></div><div class="playhead" id="detailPlay"></div><div class="handle in" id="inHandle" aria-label="In"></div><div class="handle out" id="outHandle" aria-label="Out"></div></div></div>
+          <div class="nudge"><button class="tiny" data-nudge="in,-0.5">−0.5 In</button><button class="tiny" data-nudge="in,0.5">+0.5 In</button><button class="tiny" data-nudge="out,-0.5">−0.5 Out</button><button class="tiny" data-nudge="out,0.5">+0.5 Out</button></div>
+        </div>
+      </div>
+
+      <section class="library"><div class="libHead"><h2>Clip Library <span id="clipCount" style="color:var(--muted);font-weight:500"></span></h2><button class="tiny" id="clearAll">Clear</button></div><div id="clipList" class="clipList"><div class="empty">Your clips will appear here.<br><br>Watch → Mark In → Mark Out → Add Clip.</div></div></section>
+    </div>
+  </section>
+</div>
+
+<div id="sheet" class="sheet"><div class="sheetBody"><div style="display:flex;justify-content:space-between;align-items:center"><h3 id="sheetTitle">Preview</h3><button class="tiny" id="closeSheet">Close</button></div><video id="previewVideo" class="previewVideo" playsinline controls></video><p class="note" id="sheetInfo"></p></div></div>
+<div id="exportOverlay" class="exportOverlay"><div class="exportBox"><div class="spinner"></div><h3 id="exportTitle">Creating clip…</h3><p id="exportText" class="note">Keep ClipMine open while the selected range plays through once. The finished clip will then be ready to save.</p><button class="danger" id="cancelExport">Cancel</button></div></div>
+<div id="toast" class="toast"></div>
+<canvas id="renderCanvas" hidden></canvas>
+<script src="./export.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
