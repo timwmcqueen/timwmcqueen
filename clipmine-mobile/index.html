@@ -19,7 +19,7 @@
 
   <section id="picker" class="picker card">
     <h1>Pick a video and start clipping.</h1>
-    <p>Everything happens on one timeline. Drag the green Start line and gold End line, then create the clip and keep watching.</p>
+    <p>One timeline. Drag the video position, drag Start and End, then create the clip and keep watching.</p>
     <input id="fileInput" type="file" accept="video/*" hidden />
     <button class="primary" id="pickBtn">Choose video</button>
   </section>
@@ -42,7 +42,7 @@
 
           <div class="timelineViewport" id="timelineViewport">
             <div class="timelineContent" id="timelineContent">
-              <div class="ticks"></div>
+              <div class="ticks" id="ticks"></div>
               <div class="selection" id="selection"></div>
 
               <div class="boundary start" id="startHandle" aria-label="Clip start">
@@ -52,10 +52,10 @@
               <div class="boundary end" id="endHandle" aria-label="Clip end">
                 <div class="handleCap">END</div><div class="handleLine"></div><div class="handleGrip"></div>
               </div>
+            </div>
 
-              <div class="playhead" id="playhead" aria-label="Video position">
-                <div class="playheadBubble" id="playheadBubble">0:00.00</div><div class="playheadLine"></div><div class="playheadKnob"></div>
-              </div>
+            <div class="playhead" id="playhead" aria-label="Video position">
+              <div class="playheadBubble" id="playheadBubble">0:00.00</div><div class="playheadLine"></div><div class="playheadKnob"></div>
             </div>
           </div>
 
